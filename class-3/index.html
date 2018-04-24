@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+		function HelloWorld(propes){
+			return (
+			    <div>
+                  <h1>Hello, React! { propes.name }</h1>
+                  <MyAge age="20" adult="Yes"/>
+                </div>
+            );
+		}
+
+		function MyAge(propes) {
+        return(
+          <h2>My Age: {propes.age}.
+          Adult? : {propes.adult}</h2>
+        );
+        }
+      ReactDOM.render(
+                  <div>
+        <HelloWorld name="CODEMENBD" />
+        <HelloWorld name="H SANI" />
+                  </div>,
+        document.getElementById('root')
+      );
+
+    </script>
+  </body>
+</html>
